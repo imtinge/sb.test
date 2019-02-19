@@ -1,9 +1,10 @@
 <?php
 
-namespace SB;
+namespace Imtinge\Core;
 
 class Bootstrap
 {
+    private $requset;
     public function __construct()
     {
         $whoops = new \Whoops\Run;
@@ -18,12 +19,9 @@ class Bootstrap
         /*     'password' => '123456', */
         /*     'charset' => 'utf8' */
         /* ]); */
-        spl_autoload_register('\SB\Bootstrap::load');
-        new \app\conf\Conf();
     }
 
-    static public function load($name)
+    public function run()
     {
-        include APP . 'conf/conf.php';
     }
 }

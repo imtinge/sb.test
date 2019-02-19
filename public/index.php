@@ -7,4 +7,5 @@ define('CORE', BASE . 'core' . DIRECTORY_SEPARATOR);
 
 include BASE . 'vendor/autoload.php';
 
-new \SB\Bootstrap();
+$app = new \Imtinge\Core\Bootstrap;
+$app->run();
